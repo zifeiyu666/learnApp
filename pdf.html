@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" style='overflow: hidden'>
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" id="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"> -->
+	<script type="text/javascript" src='js/jquery-3.1.0.min.js'></script>
+	<script type="text/javascript" src='bootstrap-3.3.5-dist/js/bootstrap.min.js'></script>
+	<script type="text/javascript" src='js/swiper.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<title>Document</title>
+	<meta name="wap-font-scale" content="no">
+	<script src='js/fastclick.js'></script>
+	<script type="text/javascript">
+		document.getElementsByTagName('html')[0].style.fontSize=document.documentElement.clientWidth/108+'px';
+
+		// fastClick
+		$(function() {
+		    FastClick.attach(document.body);
+		});
+	</script>
+	<style>
+		.wendaList{
+		padding:2rem 5rem;
+		margin-top:2rem;
+		background: #fff;
+		}
+		.wendaList h4{
+			font-size:3.4rem;
+			color:@main_gray;
+			line-height: 6rem;
+			span{
+				margin-left:4.4rem;
+			}
+		}
+		.wendaList h3{
+			font-size: 4.0rem;
+			color:@font_c;
+			line-height: 9rem;
+		}
+
+
+		.subNav{
+			margin:0;
+			padding:0;
+			box-shadow: 0px 0px 1px #ccc;
+		}
+		header{
+			box-shadow: 0px 1px 3px #000;
+			z-index:10;
+			position:relative;
+		}
+		.toolbar{
+			display: none !important;
+		}
+
+	</style>
+</head>
+<body >
+	<!-- pdf -->
+	<section id="page_index" class='bgc'>
+		<header>
+			<span id='back' class='glyphicon glyphicon-chevron-left' style='font-size: 5rem;color:#fff;line-height:10rem '></span>
+			<span id='add_icon'></span>
+		</header>
+		<iframe id='pdfWrap' src="pdfjs-1.6.210-dist/web/viewer.html?file=../../document/01.pdf" frameborder="0" width='100%'></iframe>
+
+	</section>	
+
+
+</body>
+
+<script type="text/javascript">
+	function fnSubTab(obj1,obj2,obj3,len01,len02,speed){
+		$(obj1).on('click',function(){
+			$(this).addClass('active').siblings('div').removeClass('active');
+			var num=($(this).index()-1)*len02;
+			$(obj3).stop().animate({'left':(len01+num)+'rem'},speed);
+			var name=$(this).attr('name');
+			$(obj2).fadeOut(0);
+			console.log(name);
+			$('.'+name).fadeIn(100);
+		})
+	}
+
+	/*问答模态窗副标题*/
+	fnSubTab('.subNav div','.wendaWrap','.subNav span',14.2,36,400)
+	/*$('#modal_read .subNav div').click(function(){
+		$(this).addClass('active').siblings('div').removeClass('active');
+		var num=($(this).index('div'))*55.4;
+		$('#modal_read .subNav span').animate({'left':(22.5+num)+'rem'},400);
+		var name=$(this).attr('name');
+		$('.readList').fadeOut(0);
+		$('.'+name).fadeIn(100);
+	})*/
+
+	window.onload=function(){
+		console.log($("header").outerHeight())
+		$("#pdfWrap").height( $(window).height()-$("header").outerHeight() ) ;
+	}
+
+	$("#back").click(function(){
+		window.location.href='trainingApp.html';
+	})
+</script>
+</html>

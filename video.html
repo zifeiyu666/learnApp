@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src='js/jquery-3.1.0.min.js'></script>
+	<script type="text/javascript" src='bootstrap-3.3.5-dist/js/bootstrap.min.js'></script>
+	<script type="text/javascript" src='js/swiper.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<title>Document</title>
+	<meta name="wap-font-scale" content="no">
+	<script src='js/fastclick.js'></script>
+	<script type="text/javascript">
+		document.getElementsByTagName('html')[0].style.fontSize=document.documentElement.clientWidth/108+'px';
+		// fastClick
+		$(function() {
+		    FastClick.attach(document.body);
+		});
+	</script>
+	<style>
+		.wendaList{
+		padding:2rem 5rem;
+		margin-top:2rem;
+		background: #fff;
+		}
+		.wendaList h4{
+			font-size:3.4rem;
+
+			line-height: 6rem;
+
+		}
+		.wendaList h3{
+			font-size: 4.0rem;
+
+			line-height: 9rem;
+		}
+
+
+		.subNav{
+			margin:0;
+			padding:0;
+			box-shadow: 0px 0px 1px #ccc;
+		}
+		#back{
+			font-size: 5rem;
+			color:#fff;
+			line-height:12rem ;
+
+		}
+		/*#header{
+			height:6rem;
+			background:#34394b;
+			padding:0rem 2.4rem;
+		}
+		
+		#myVideo{
+			width:100%;
+		}*/
+	</style>
+</head>
+<body>
+	<!-- 视频 -->
+	<section id="page_index" class='bgc'>
+		<header id='header'>
+			<span id='back' class='glyphicon glyphicon-chevron-left'></span>
+		</header>
+		<video id="myVideo" src="video/video.mp4" poster='img/poster.jpg' controls='controls' width='100%'>
+			您的浏览器不支持播放视频，请升级到最新你版本。
+		</video>
+		<div class="subNav clearfix">
+			<span class='threeSpan'></span>
+			<div class='active threeList' name='section'>章节</div>
+			<div class='threeList' name='detail'>详情</div>
+			<div class='threeList' name='teacher'>评论</div>
+		</div>
+		<div class="wendaWrap section">
+			<div class='line  wendaList' >
+				<h3>
+					第一章
+				</h3>
+				<h4>安全生产责任重于泰山。</h4>
+				<h4>如何落实安全生产。</h4>
+
+			</div>
+			<div class='line  wendaList'>
+				<h3>
+					第二章
+				</h3>
+				<h4>安全生产责任重于泰山。</h4>
+				<h4>如何落实安全生产。</h4>
+
+			</div>
+			<div class='line  wendaList'>
+				<h3>
+					第三章
+				</h3>
+				<h4>安全生产责任重于泰山。</h4>
+				<h4>如何落实安全生产。</h4>
+
+			</div>
+		</div>
+		<div class="wendaWrap detail myHide" >
+			<div class='line  wendaList'>
+				<h3>
+					课程简介
+				</h3>
+				<h4>这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介。</h4>
+
+			</div>
+
+		</div>
+		<div class="wendaWrap teacher myHide">
+			
+			<div class="jingyanWrap">
+				<div class='line  jingyanList row'>
+					<div class="col-xs-2">
+						<div class='userFace'><img src="img/touxiang.png" width='100%'></div>
+					</div>
+					<div class="col-xs-10">
+						
+						
+						<h5>
+							<p>
+								小王：基本做法及经验，安全生产是“人命关天”的大事，是重于一切、大于一切、高于一切、先于一切的工作。
+							</p>
+							<div class="subTips">
+								<span class='tips' id='zantong'>123赞同</span>
+								<span class='tips' id='pinglun'>265评论</span>
+								
+							</div>
+							
+						</h5>
+					</div>	
+				</div>
+				<div class='line  jingyanList row'>
+					<div class="col-xs-2">
+						<div class='userFace'><img src="img/touxiang.png" width='100%'></div>
+					</div>
+					<div class="col-xs-10">
+						
+						
+						<h5>
+							<p>
+								小王：基本做法及经验，安全生产是“人命关天”的大事，是重于一切、大于一切、高于一切、先于一切的工作。
+							</p>
+							<div class="subTips">
+								<span class='tips' id='zantong'>123赞同</span>
+								<span class='tips' id='pinglun'>265评论</span>
+								
+							</div>
+							
+						</h5>
+					</div>	
+				</div>
+				<div class='line  jingyanList row'>
+					<div class="col-xs-2">
+						<div class='userFace'><img src="img/touxiang.png" width='100%'></div>
+					</div>
+					<div class="col-xs-10">
+						
+						
+						<h5>
+							<p>
+								小王：基本做法及经验，安全生产是“人命关天”的大事，是重于一切、大于一切、高于一切、先于一切的工作。
+							</p>
+							<div class="subTips">
+								<span class='tips' id='zantong'>123赞同</span>
+								<span class='tips' id='pinglun'>265评论</span>
+								
+							</div>
+							
+						</h5>
+					</div>	
+				</div>
+			</div>
+
+		</div>
+
+	</section>	
+
+
+</body>
+
+<script type="text/javascript">
+	function fnSubTab(obj1,obj2,obj3,len01,len02,speed){
+		$(obj1).on('click',function(){
+			$(this).addClass('active').siblings('div').removeClass('active');
+			var num=($(this).index()-1)*len02;
+			$(obj3).stop().animate({'left':(len01+num)+'rem'},speed);
+			var name=$(this).attr('name');
+			$(obj2).fadeOut(0);
+			console.log(name);
+			$('.'+name).fadeIn(100);
+		})
+	}
+
+	/*问答模态窗副标题*/
+	fnSubTab('.subNav div','.wendaWrap','.subNav span',14.2,36,400)
+	/*$('#modal_read .subNav div').click(function(){
+		$(this).addClass('active').siblings('div').removeClass('active');
+		var num=($(this).index('div'))*55.4;
+		$('#modal_read .subNav span').animate({'left':(22.5+num)+'rem'},400);
+		var name=$(this).attr('name');
+		$('.readList').fadeOut(0);
+		$('.'+name).fadeIn(100);
+	})*/
+
+	$("#back").click(function(){
+		window.location.href='trainingApp.html';
+	})
+</script>
+</html>

@@ -1,0 +1,2464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" id="viewport" content="user-scalable=no,width=1600px,target-densitydpi=device-dpi">
+	<script type="text/javascript" src='js/jquery-3.1.0.min.js'></script>
+	<script type="text/javascript" src='bootstrap-3.3.5-dist/js/bootstrap.min.js'></script>
+	<script type="text/javascript" src='js/swiper.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<title>Document</title>
+	<meta name="wap-font-scale" content="no">
+	<script src='js/fastclick.js'></script>
+	<script type="text/javascript">
+	    // 设置html字号
+	    console.log(document.documentElement.clientWidth);
+		document.getElementsByTagName('html')[0].style.fontSize=document.documentElement.clientWidth/108+'px';
+		// fastClick
+		$(function() {
+		    FastClick.attach(document.body);
+		});
+	</script> 
+	<style>
+		.readHistoryList{
+			padding:4rem 2rem;
+			margin-bottom:2rem;
+			background: #fff;
+
+		}
+		.readHistoryList .headImg{
+
+			height:20rem;
+			border-radius: 1rem;
+			overflow:hidden;
+		}
+		.readHistoryList .headImg img{
+			width:100%;
+		}
+		.videoHistoryList .headImg img{
+			position: relative;
+			top:-20rem;
+		}
+		.readHistoryList h4{
+			font-size: 4.0rem;
+			line-height: 5rem;
+			color:#333333;
+			padding:2rem 0rem;
+		}
+		.readHistoryList p{
+			font-size: 3.4rem;
+			color:#b7bbbf;
+			margin-top:2rem;
+			padding:0rem;
+			line-height: 4rem;
+
+		}
+	</style>
+
+</head>
+<body>
+
+	<div class="swiper-container" id='main-swiper'>
+	    <div class="swiper-wrapper">
+	    	<!-- 主页 -->
+	        <div class="swiper-slide">
+	        	
+				<section id="page_index" class='bgc'>
+					<header>
+						<div id='search'>
+							<span id='search_icon'></span>
+							<label>请输入您要搜索的内容</label>
+						</div>
+						<span id='add_icon'></span>
+					</header>
+					<div class="banner">
+						<!-- Swiper -->
+					    <div class="swiper-container" id='nav-swiper'>
+					        <div class="swiper-wrapper">
+					            <div class="swiper-slide"><img src="img/banner.png"></div>
+					            <div class="swiper-slide"><img src="img/banner.png"></div>
+					            <div class="swiper-slide"><img src="img/banner.png"></div>
+					        </div>
+					        <!-- Add Pagination -->
+					        <div class="swiper-pagination" id='nav-pagination'></div>
+					    </div>
+					</div>
+					<div class="row" id='nav'>
+						<div class="col-xs-3" id='readBtn'><a href="#"></a></div>
+						<div class="col-xs-3" id='datiBtn'><a href="#"></a></div>
+						<div class="col-xs-3" id='wendaBtn'><a href="#"></a></div>
+						<div class="col-xs-3" id='jingyanBtn'><a href="#"></a></div>
+					</div>
+					<!-- live -->
+					<div class="list">
+						<div class="listTitle listTitle01">
+							<span>正在直播</span>
+							<label class='pull-right more'>更多</label>
+						</div>
+						<div class="row listWrap">
+							<div class="col-xs-3 listNav listNav01 live">
+								<a href="#"></a>
+							</div>
+							<div class="col-xs-3 listNav listNav01 live">
+								<a href="#"></a>
+							</div>
+							<div class="col-xs-3 listNav listNav01 live">
+								<a href="#"></a>
+							</div>
+							<div class="col-xs-3 listNav listNav01 live">
+								<a href="#"></a>
+							</div>
+						</div>
+					</div>
+					<!-- recomment -->
+					<div class="list">
+						<div class="listTitle listTitle02">
+							<span>按照您的学习基因推荐</span>
+							<label class='pull-right more'>更多</label>
+						</div>
+						<div class="row listWrap">
+							<div class="col-xs-6 listNavBig listNav02 video">
+								<a href="#"></a>
+							</div>
+							<div class="col-xs-6 listNavBig listNav02 video">
+								<a href="#"></a>
+							</div>
+						</div>
+						<div class="row listWrap">
+							<div class="col-xs-6 listNavBig listNav02 video">
+								<a href="#"></a>
+							</div>
+							<div class="col-xs-6 listNavBig listNav02 video">
+								<a href="#"></a>
+							</div>
+						</div>
+					</div>
+					<!-- perfect -->
+					<div class="list">
+						<div class="listTitle listTitle03">
+							<span>精品推荐</span>
+							<label class='pull-right more'>更多</label>
+						</div>
+						<div class="row listWrap">
+							<div class="col-xs-6 listNavBig listNav03 document">
+								<a href="#"></a>
+							</div>
+							<div class="col-xs-6 listNavBig listNav03 document">
+								<a href="#"></a>
+							</div>
+						</div>
+						<div class="row listWrap">
+							<div class="col-xs-6 listNavBig listNav03 document">
+								<a href="#"></a>
+							</div>
+							<div class="col-xs-6 listNavBig listNav03 document">
+								<a href="#"></a>
+							</div>
+						</div>
+					</div>
+					<!-- fav -->
+					<div class="list">
+						<div class="listTitle listTitle04">
+							<span>好评推荐</span>
+							<label class='pull-right more'>更多</label>
+						</div>
+						<div class="row listWrap">
+							<div class="col-xs-6 listNavBig listNav04 video">
+								<a href="#"></a>
+							</div>
+							<div class="col-xs-6 listNavBig listNav04 video">
+								<a href="#"></a>
+							</div>
+						</div>
+						<div class="row listWrap">
+							<div class="col-xs-6 listNavBig listNav04 video">
+								<a href="#"></a>
+							</div>
+							<div class="col-xs-6 listNavBig listNav04 document">
+								<a href="#"></a>
+							</div>
+						</div>
+					</div>
+				</section>
+	        </div>
+	        <!-- 历史纪录 -->
+	        <div class="swiper-slide">
+	        	
+				<section id='page_history' class='bgc'>
+					<header>
+						<span style='font-size: 4rem;line-height: 10.8rem;color:#fff;margin-left:2rem'>历史纪录</span>
+						<span id='add_icon'></span>
+					</header>
+					<div class="subNav clearfix">
+						<span class='twoSpan'></span>
+						<div class='active twoList' name='readWrap'>阅读</div>
+						<div class='twoList' name='videoWrap'>视频</div>
+					</div>
+
+					<div class='readWrap readList'>
+						<div class="clearfix readHistoryList">
+							<div class="col-xs-6 headImg">
+								<img src="img/dna01.png" width=100% alt="">
+							</div>
+							<div class="col-xs-6 document">
+								<h4><span style='color:#70788c;font-size: 4.0rem;margin-right:1rem'>[阅读]</span>石化行业安全作业系列讲座</h4>
+								<p>学习进度，您已完成60%</p>
+							</div>
+						</div>
+						<div class="clearfix readHistoryList">
+							<div class="col-xs-6 headImg">
+								<img src="img/dna02.png" width=100% alt="">
+							</div>
+							<div class="col-xs-6 document">
+								<h4><span style='color:#70788c;font-size: 4.0rem;margin-right:1rem'>[阅读]</span>石化行业安全作业系列讲座</h4>
+								<p>学习进度，您已完成60%</p>
+							</div>
+						</div>
+						<div class="clearfix readHistoryList">
+							<div class="col-xs-6 headImg">
+								<img src="img/dna01.png" width=100% alt="">
+							</div>
+							<div class="col-xs-6 document">
+								<h4><span style='color:#70788c;font-size: 4.0rem;margin-right:1rem'>[阅读]</span>石化行业安全作业系列讲座</h4>
+								<p>学习进度，您已完成60%</p> 
+							</div>
+						</div>
+						<div class="clearfix readHistoryList">
+							<div class="col-xs-6 headImg">
+								<img src="img/dna02.png" width=100% alt="">
+							</div>
+							<div class="col-xs-6 document">
+								<h4><span style='color:#70788c;font-size: 4.0rem;margin-right:1rem'>[阅读]</span>石化行业安全作业系列讲座</h4>
+								<p>学习进度，您已完成60%</p>
+							</div>
+						</div>
+					</div>
+					<div class='videoWrap readList  myHide'>
+						<div class="clearfix readHistoryList videoHistoryList">
+							<div class="col-xs-6 headImg">
+								<img src="img/live01.png" width=100% alt="">
+							</div>
+							<div class="col-xs-6 video">
+								<h4><span style='color:#70788c;font-size: 4.0rem;margin-right:1rem'>[视频]</span>石化行业安全作业系列讲座</h4>
+								<p>学习进度，您已完成60%</p>
+							</div>
+						</div>
+						<div class="clearfix readHistoryList videoHistoryList">
+							<div class="col-xs-6 headImg">
+								<img src="img/live02.png" width=100% alt="">
+							</div>
+							<div class="col-xs-6 video">
+								<h4><span style='color:#70788c;font-size: 4.0rem;margin-right:1rem'>[视频]</span>石化行业安全作业系列讲座</h4>
+								<p>学习进度，您已完成60%</p>
+							</div>
+						</div>
+						<div class="clearfix readHistoryList videoHistoryList">
+							<div class="col-xs-6 headImg">
+								<img src="img/live03.png" width=100% alt="">
+							</div>
+							<div class="col-xs-6 video">
+								<h4><span style='color:#70788c;font-size: 4.0rem;margin-right:1rem'>[视频]</span>石化行业安全作业系列讲座</h4>
+								<p>学习进度，您已完成60%</p>
+							</div>
+						</div>
+						<div class="clearfix readHistoryList videoHistoryList">
+							<div class="col-xs-6 headImg">
+								<img src="img/live04.png" width=100% alt="">
+							</div>
+							<div class="col-xs-6 video">
+								<h4><span style='color:#70788c;font-size: 4.0rem;margin-right:1rem'>[视频]</span>石化行业安全作业系列讲座</h4>
+								<p>学习进度，您已完成60%</p>
+							</div>
+						</div>
+					</div>
+					
+				</section>
+	        </div>
+	        <!-- 个人中心 -->
+	        <div class="swiper-slide">
+	        	
+				<section id='page_my' class='bgc'>
+					<header>
+						<span style='font-size: 4rem;line-height: 10.8rem;color:#fff;margin-left:2rem'>个人中心</span>
+						<span id='add_icon'></span>
+					</header>
+					<div id="my_wrap">
+						<div class="my_info">
+							<div class='info_01 clearfix'>
+								<span class='photo pull-left'></span>
+								<div class='base_info pull-left'>
+									<h3 >子非鱼</h3>
+									<h5>
+										<span class='study_time'>学习时长 17小时</span>
+										<span>经验 696</span>
+									</h5>
+								</div>
+							</div>
+							<div class="info_02 row">
+								<div class="col-xs-4 item borR">
+									<span>关注 1</span>
+								</div>
+								<div class="col-xs-4 item borR">
+									<span>粉丝 0</span>
+								</div>
+								<div class="col-xs-4 item">
+									<span>积分 1</span>
+								</div>
+							</div>
+						</div>
+						<div class="row" id='myNav'>
+							<div class="col-xs-3"><a href="#"></a></div>
+							<div class="col-xs-3"><a href="#"></a></div>
+							<div class="col-xs-3"><a href="#"></a></div>
+							<div class="col-xs-3"><a href="#"></a></div>
+						</div>
+						<div id="my_function">
+							<div class="list_item"><a href="#">历史纪录</a></div>
+							<div class="list_item"><a href="#">我的足迹</a></div>
+							<div class="list_item"><a href="#">我的课表</a></div>
+							<div class="list_item"><a href="#">积分商城</a></div>
+							<div class="list_item" id='my-dna'><a href="#">DNA定制</a></div>
+							<div class="list_item"><a href="#">设置</a></div>
+						</div>
+					</div>
+					
+				</section>
+	        </div>
+	    </div>
+	    <!-- 分页器 -->
+	    <div class="swiper-pagination" style='display:none' id='main-pagination'></div>
+	    
+	</div>
+
+	<!-- 课程 -->
+	<div class="modalModule bgc" id='modal_read'>
+		<header>
+			<span id='arr_left' class='modalClose'></span>
+			<span id='header_title'>课程</span>
+			<span id='add_icon'></span>
+		</header>
+		<section  id='page_class' class='bgc'>
+			<div class='clearfix' id=class_body>
+				<div id="class_sidebar">
+					<ul>
+						<span id='tip_bar'></span>
+						<li class='active'>入场安全教育</li>
+						<li>安全领导能力</li>
+
+						<li>检维修作业票</li>
+
+						<li>受限空间作业</li>
+
+						<li>动火作业</li>
+
+						<li>临时用电安全</li>
+
+						<li>高空作业</li>
+
+						<li>辐射作业安全</li>
+
+						<li>动土作业安全</li>
+
+						<li>起重作业安全</li>
+
+						<li>工艺安全</li>
+
+						<li>变更管理</li>
+
+					</ul>
+				</div>
+				<div class="banner"></div>
+				<div id="class_hse" class='class_content'>
+					
+					<ul>
+						<li>国家安全法律法规</li>
+						<li>厂区基本规则和规定</li>
+						<li>规章制度和劳动纪律</li>
+						<li>厂区可能存在的危害</li>
+						<li>有关事故案例</li>
+						<li>事故应急救援，事故预案及防范措施</li>
+					</ul>
+				</div>
+				<div id="class_sys" class='class_content' style='display:none'>
+
+					<ul>
+						<li>管理安全职责</li>
+						<li>正确的安全领导态度</li>
+						<li>如何成为优秀的安全领导</li>
+					</ul>
+
+				</div>
+				<div id="class_cer" class='class_content' style='display:none'>
+					<ul>
+						<li>危害识别、危险评估及风险控制</li>
+						<li>工作安全分析</li>
+						<li>有效安全检查</li>
+					</ul>
+
+				</div>
+
+				
+			</div>
+		</section>
+	</div>
+
+		<!-- 课程详情 -->
+		<div class="modalModule bgc" id='module_readDetail'>
+			<header>
+				<span id='arr_left' class='modalClose'></span>
+				<span id='header_title'>详情</span>
+				<span id='add_icon'></span>
+			</header>
+			<section id='page_readDetail'>
+				<!-- perfect -->
+				<div class="list">
+					<div class="listTitle listTitle03">
+						<span>视频</span>
+					</div>
+					<div class="row listWrap">
+						<div class="col-xs-6 listNavBig listNav03 document">
+							<a href="#"></a>
+						</div>
+						<div class="col-xs-6 listNavBig listNav03 document">
+							<a href="#"></a>
+						</div>
+					</div>
+					<div class="row listWrap">
+						<div class="col-xs-6 listNavBig listNav03 document">
+							<a href="#"></a>
+						</div>
+						<div class="col-xs-6 listNavBig listNav03 document">
+							<a href="#"></a>
+						</div>
+					</div>
+					<div class="row listWrap">
+						<div class="col-xs-6 listNavBig listNav03 document">
+							<a href="#"></a>
+						</div>
+						<div class="col-xs-6 listNavBig listNav03 document">
+							<a href="#"></a>
+						</div>
+					</div>
+					<div class="row listWrap">
+						<div class="col-xs-6 listNavBig listNav03 document">
+							<a href="#"></a>
+						</div>
+						<div class="col-xs-6 listNavBig listNav03 document">
+							<a href="#"></a>
+						</div>
+					</div>
+				</div>
+				<!-- fav -->
+				<div class="list">
+					<div class="listTitle listTitle04">
+						<span>阅读</span>
+					</div>
+					<div class="row listWrap">
+						<div class="col-xs-6 listNavBig listNav04 video">
+							<a href="#"></a>
+						</div>
+						<div class="col-xs-6 listNavBig listNav04 video">
+							<a href="#"></a>
+						</div>
+					</div>
+					<div class="row listWrap">
+						<div class="col-xs-6 listNavBig listNav04 video">
+							<a href="#"></a>
+						</div>
+						<div class="col-xs-6 listNavBig listNav04 document">
+							<a href="#"></a>
+						</div>
+					</div>
+					<div class="row listWrap">
+						<div class="col-xs-6 listNavBig listNav04 video">
+							<a href="#"></a>
+						</div>
+						<div class="col-xs-6 listNavBig listNav04 video">
+							<a href="#"></a>
+						</div>
+					</div>
+					<div class="row listWrap">
+						<div class="col-xs-6 listNavBig listNav04 video">
+							<a href="#"></a>
+						</div>
+						<div class="col-xs-6 listNavBig listNav04 document">
+							<a href="#"></a>
+						</div>
+					</div>
+				</div>
+			</section>
+	
+		</div>
+
+	<!-- 答题 -->
+	<div class='modalModule bgc' id='modal_dati'>
+		<header>
+			<span id='arr_left' class='modalClose'></span>
+			<span id='header_title'>答题</span>
+			<span id='add_icon'></span>
+		</header>
+		<div class="datiWrap bg_c">
+
+			<div class='datiList'>
+				<div class="listTitle" >
+					<span>综合答题</span>
+					<!-- <label class='pull-right more'>更多</label> -->
+				</div>
+				<div class="row listItem" >
+					<div class="col-xs-6" id='zxdt'>
+						<div class='clearfix'>
+						<a href="#" class='pull-right'><img src='img/datiIcon (1).png' alt="" height='90'></a>
+						<p class='col01'>专项答题</p>
+						<span>补齐您的木桶短板</span>
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class='clearfix' id='zhdt'>
+						<a href="#" class='pull-right'><img src='img/datiIcon (2).png' alt="" height='90' style='margin-right:1rem'></a>
+						<p class='col02'>综合答题</p>
+						<span>一身本领融会贯通</span>
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class='clearfix' id='mrdt'>
+						<a href="#" class='pull-right'><img src='img/datiIcon (3).png' alt="" height='90'></a>
+						<p class='col03'>每日答题</p>
+						<span>积跬步以至千里</span>
+						</div>
+					</div>
+					<div class="col-xs-6" id='wdct'>
+						<div class='clearfix'>
+						<a href="#" class='pull-right'><img src='img/datiIcon (4).png' alt="" height='90' style='margin-right:1.5rem'></a>
+						<p class='col04'>我的错题</p>
+						<span>胜败乃兵家常事</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class='datiList'>
+				<div class="listTitle" >
+					<span>模拟考试</span>
+					<!-- <label class='pull-right more'>更多</label> -->
+				</div>
+				<div class="row listItem" >
+					<div class="col-xs-6" id='mncs'>
+						<div class='clearfix'>
+						<a href="#" class='pull-right'><img src='img/datiIcon (5).png' alt="" height='90'></a>
+						<p class='col01'>模拟测试</p>
+						<span>知己知彼百战不殆</span>
+						</div>
+					</div>
+					<div class="col-xs-6" id='ksks'>
+						<div class='clearfix'>
+						<a href="#" class='pull-right'><img src='img/datiIcon (6).png' alt="" height='90' style='margin-right:1rem'></a>
+						<p class='col02'>开始考试</p>
+						<span>甩开压力轻装上阵</span>
+						</div>
+					</div>
+					<div class="col-xs-6" id='phb'>
+						<div class='clearfix'>
+						<a href="#" class='pull-right'><img src='img/datiIcon (7).png' alt="" height='90'></a>
+						<p class='col04'>排行榜</p>
+						<span>英雄榜上留君名</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class='datiList'>
+				<div class="listTitle" >
+					<span>趣味答题</span>
+					<!-- <label class='pull-right more'>更多</label> -->
+				</div>
+				<div class="row listItem" id='zxdt'>
+					<div class="col-xs-6" id='answerBtn'>
+						<div class='clearfix' id='dtpk'>
+						<a href="#" class='pull-right'><img src='img/datiIcon (8).png' alt="" height='90'></a>
+						<p class='col01'>答题PK</p>
+						<span>狭路相逢智者胜</span>
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class='clearfix' id='wct'>
+						<a href="#" class='pull-right'><img src='img/datiIcon (9).png' alt="" height='90' style='margin-right:1rem'></a>
+						<p class='col02'>我出题</p>
+						<span>我的地盘听我的</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+		</div>
+
+	</div>
+		<!-- 题库 -->
+		<div class="modalModule" id='modal_class' style='background: #fff'>
+			<header>
+				<span id='arr_left' class='modalClose'></span>
+				<span id='header_title'>题库</span>
+				<span id='add_icon'></span>
+			</header>
+
+			<div class='clearfix' style='background: #fff;margin-top:4rem'>
+				<div class="myTitle">
+					<span>HSE</span>
+					<label class="myLabel"></label>
+				</div>
+				<div style='padding:4rem'>
+
+					<span class='tag tagActive'>入场安全教育</span>
+
+					<span class='tag'>安全领导能力</span>
+
+					<span class='tag'>危害管理和作业安全分析（JSA）</span>
+
+					<span class='tag'>事故报告与调查</span>
+
+					<span class='tag'>检维修作业票</span>
+
+					<span class='tag'>受限空间作业</span>
+
+					<span class='tag'>动火作业</span>
+
+					<span class='tag'>临时用电安全</span>
+
+					<span class='tag'>高空作业</span>
+
+					<span class='tag'>辐射作业安全</span>
+
+					<span class='tag'>动土作业安全</span>
+
+					<span class='tag'>起重作业安全</span>
+
+					<span class='tag'>化学品安全和MSDS</span>
+
+					<span class='tag'>工艺安全</span>
+
+					<span class='tag'>变更管理</span>
+
+					<span class='tag'>紧急响应</span>
+
+					<span class='tag'>急救处理</span>
+
+					<span class='tag'>个人防护用品</span>
+
+					<span class='tag'>承包商管理</span>
+
+					<span class='tag'>实验室安全</span>
+
+					<span class='tag'>泄漏预防与控制</span>
+
+				</div>
+			</div>
+
+			<div class='clearfix' style='background: #fff;margin-top:4rem'>
+				<div class="myTitle">
+					<span>信息系统</span>
+					<label class="myLabel"></label>
+				</div>
+				<div style='padding:4rem'>
+
+					<span class='tag'>教育培训</span>
+
+					<span class='tag'>风险管理</span>
+
+					<span class='tag'>承包商管理</span>
+
+					<span class='tag'>安保基金</span>
+
+					<span class='tag'>材料速递</span>
+
+					<span class='tag'>监管机制</span>
+
+					<span class='tag'>三同时管理</span>
+
+					<span class='tag'>事故管理</span>
+
+					<span class='tag'>隐患治理</span>
+
+				</div>
+			</div>
+
+			<div class='clearfix' style='background: #fff;margin-top:4rem'>
+				<div class="myTitle">
+					<span>专业证书</span>
+					<label class="myLabel"></label>
+				</div>
+				<div style='padding:4rem'>
+
+					<span class='tag'>高级化工工程员</span>
+
+					<span class='tag'>助理化工工程师</span>
+
+					<span class='tag'>化工工程师</span>
+
+					<span class='tag'>高级化工工程师</span>
+
+					<span class='tag'>暖通工程师</span>
+
+					<span class='tag'>注册化工工艺工程师</span>
+
+					<span class='tag'>注册安全工程师</span>
+
+					<span class='tag'>安全管理资格证</span>
+
+					<span class='tag'>注册化工工程师</span>
+
+				</div>
+			</div>
+			<button class="btn btn-default " id='btnSubmit'>开始答题</button>
+		</div>
+		<!-- 做题/背题 -->
+		<div class="modalModule" id='modal_answerReview'>
+			<section class='bgc'>
+				<header>
+					<span id='arr_left' class='modalClose'></span>
+					<span id='header_title'>答题</span>
+					<span id='add_icon'></span>
+				</header>
+				<div class="subNav clearfix" id='answerTitle'>
+					<span class='twoSpan'></span>
+					<div class='active twoList' name='dati'>普通答题</div>
+					<div class='twoList' name='beiti'>背题模式</div>
+				</div>
+				<div class="swiper-container" id='answerReview-swiper'>
+				    <div class="swiper-wrapper" >
+				        <div class="swiper-slide">
+							
+							<div class="wendaWrap dati">
+								<div class='line  wendaList' >
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<span class='title'>单选题:</span>
+											<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+										</div>
+										<div class="panel-body">
+											<div class='item'>
+												<span>A</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>B</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>C</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>D</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="wendaWrap beiti myHide" >
+								<div class='line  wendaList' >
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<span class='title'>单选题:</span>
+											<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+										</div>
+										<div class="panel-body">
+											<div class='item'>
+												<span>A</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>B</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span class='active'>C</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>D</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+										</div>
+									</div>
+									<div class='line  wendaList'>
+										<h3>
+											考点：<span>可燃物氧化剂</span>
+										</h3>
+										<h4>燃烧是指可燃物与氧化剂发生的一种发光发热的氧化反应。</h4>
+										<div class="item">
+											<span class='long'><label class='glyphicon glyphicon-heart-empty'></label>有用</span>
+											<span class='long'>
+											<label class='glyphicon glyphicon-thumbs-down'></label>没用</span>
+										</div>
+									</div>
+									<div class='line  wendaList'>
+										<h3>
+											统计：<span>我的错误率</span>
+										</h3>
+										<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+										<h3>
+											题友错误率：
+										</h3>
+										<div class="progress">
+										  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+										    60%
+										  </div>
+										</div>
+									</div>
+									<div class="well well-sm"><h3>拓展</h3></div>
+									<div class='line  wendaList'>
+										<h3>
+											统计：<span>我的错误率</span>
+										</h3>
+										<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+										<h3>
+											题友错误率：
+										</h3>
+										<div class="progress">
+										  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+										    60%
+										  </div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+				        </div>
+				        <div class="swiper-slide">
+							
+							<div class="wendaWrap dati">
+								<div class='line  wendaList' >
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<span class='title'>单选题:</span>
+											<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+										</div>
+										<div class="panel-body">
+											<div class='item'>
+												<span>A</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>B</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>C</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>D</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="wendaWrap beiti myHide" >
+								<div class='line  wendaList' >
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<span class='title'>单选题:</span>
+											<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+										</div>
+										<div class="panel-body">
+											<div class='item'>
+												<span>A</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>B</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span class='active'>C</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>D</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+										</div>
+									</div>
+									<div class='line  wendaList'>
+										<h3>
+											考点：<span>可燃物氧化剂</span>
+										</h3>
+										<h4>燃烧是指可燃物与氧化剂发生的一种发光发热的氧化反应。</h4>
+										<div class="item">
+											<span class='long'><label class='glyphicon glyphicon-heart-empty'></label>有用</span>
+											<span class='long'>
+											<label class='glyphicon glyphicon-thumbs-down'></label>没用</span>
+										</div>
+									</div>
+									<div class='line  wendaList'>
+										<h3>
+											统计：<span>我的错误率</span>
+										</h3>
+										<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+										<h3>
+											题友错误率：
+										</h3>
+										<div class="progress">
+										  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+										    60%
+										  </div>
+										</div>
+									</div>
+									<div class="well well-sm"><h3>拓展</h3></div>
+									<div class='line  wendaList'>
+										<h3>
+											概念：
+										</h3>
+										<h4>燃烧是指可燃物与氧气发生的一种发光发热的剧烈的氧化反应</h4>
+										<h3>
+											燃烧的三个条件：
+										</h3>
+										<h4>
+											物质具有可燃性，可燃物与氧气接触，温度达到可燃物的着火点
+										</h4>
+										<h3>
+											促进燃烧的方法：
+										</h3>
+										<h4>
+											（1）增大氧气浓度
+											（2）增大可燃物与氧气的接触面积
+										</h4>
+
+									</div>
+								</div>
+
+							</div>
+				        </div>
+				        <div class="swiper-slide">
+							
+							<div class="wendaWrap dati">
+								<div class='line  wendaList' >
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<span class='title'>单选题:</span>
+											<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+										</div>
+										<div class="panel-body">
+											<div class='item'>
+												<span>A</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>B</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>C</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>D</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="wendaWrap beiti myHide" >
+								<div class='line  wendaList' >
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<span class='title'>单选题:</span>
+											<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+										</div>
+										<div class="panel-body">
+											<div class='item'>
+												<span>A</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>B</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span class='active'>C</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>D</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+										</div>
+									</div>
+									<div class='line  wendaList'>
+										<h3>
+											考点：<span>可燃物氧化剂</span>
+										</h3>
+										<h4>燃烧是指可燃物与氧化剂发生的一种发光发热的氧化反应。</h4>
+										<div class="item">
+											<span class='long'><label class='glyphicon glyphicon-heart-empty'></label>有用</span>
+											<span class='long'>
+											<label class='glyphicon glyphicon-thumbs-down'></label>没用</span>
+										</div>
+									</div>
+									<div class='line  wendaList'>
+										<h3>
+											统计：<span>我的错误率</span>
+										</h3>
+										<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+										<h3>
+											题友错误率：
+										</h3>
+										<div class="progress">
+										  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+										    60%
+										  </div>
+										</div>
+									</div>
+									<div class="well well-sm"><h3>拓展</h3></div>
+									<div class='line  wendaList'>
+										<h3>
+											统计：<span>我的错误率</span>
+										</h3>
+										<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+										<h3>
+											题友错误率：
+										</h3>
+										<div class="progress">
+										  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+										    60%
+										  </div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+				        </div>
+				        <div class="swiper-slide">
+							
+							<div class="wendaWrap dati">
+								<div class='line  wendaList' >
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<span class='title'>单选题:</span>
+											<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+										</div>
+										<div class="panel-body">
+											<div class='item'>
+												<span>A</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>B</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>C</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>D</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="wendaWrap beiti myHide" >
+								<div class='line  wendaList' >
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<span class='title'>单选题:</span>
+											<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+										</div>
+										<div class="panel-body">
+											<div class='item'>
+												<span>A</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>B</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span class='active'>C</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>D</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+										</div>
+									</div>
+									<div class='line  wendaList'>
+										<h3>
+											考点：<span>可燃物氧化剂</span>
+										</h3>
+										<h4>燃烧是指可燃物与氧化剂发生的一种发光发热的氧化反应。</h4>
+										<div class="item">
+											<span class='long'><label class='glyphicon glyphicon-heart-empty'></label>有用</span>
+											<span class='long'>
+											<label class='glyphicon glyphicon-thumbs-down'></label>没用</span>
+										</div>
+									</div>
+									<div class='line  wendaList'>
+										<h3>
+											统计：<span>我的错误率</span>
+										</h3>
+										<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+										<h3>
+											题友错误率：
+										</h3>
+										<div class="progress">
+										  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+										    60%
+										  </div>
+										</div>
+									</div>
+									<div class="well well-sm"><h3>拓展</h3></div>
+									<div class='line  wendaList'>
+										<h3>
+											统计：<span>我的错误率</span>
+										</h3>
+										<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+										<h3>
+											题友错误率：
+										</h3>
+										<div class="progress">
+										  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+										    60%
+										  </div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+				        </div>
+				    </div>
+				    <!-- 如果需要分页器 -->
+				    <div class="swiper-pagination swiper-pagination-fraction" id='answerReview-pagination'></div>
+				    
+				</div>
+			</section>
+
+			<footer class='datiFooter'>
+				<div class="row">
+					<div class="col-xs-3">
+						<span class='glyphicon glyphicon-heart-empty '></span>收藏
+					</div>
+					<div class="col-xs-3">
+						<span class='glyphicon glyphicon-search'></span>纠错
+					</div>
+					<div class="col-xs-3">
+						<span class='glyphicon glyphicon-ok'></span>2
+					</div>
+					<div class="col-xs-3">
+						<span class='glyphicon glyphicon-remove'></span>2	
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- 普通做题 -->
+		<div class="modalModule" id='modal_answer'>
+			<section class='bgc'>
+				<header>
+					<span id='arr_left' class='modalClose'></span>
+					<span id='header_title'>答题</span>
+					<span id='add_icon'></span>
+				</header>
+
+				<div class='answerTitle'><span>普通答题</span></div>
+
+				<div class="swiper-container" id='answer-swiper'>
+
+				    <div class="swiper-wrapper" >
+
+				        <div class="swiper-slide">
+
+							<div class="wendaWrap dati">
+								<div class='line  wendaList' >
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<span class='title'>单选题:</span>
+											<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+										</div>
+										<div class="panel-body">
+											<div class='item'>
+												<span>A</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>B</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>C</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>D</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+				        </div>
+				        <div class="swiper-slide">
+							
+							<div class="wendaWrap dati">
+								<div class='line  wendaList' >
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<span class='title'>单选题:</span>
+											<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+										</div>
+										<div class="panel-body">
+											<div class='item'>
+												<span>A</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>B</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>C</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>D</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+				        </div>
+				        <div class="swiper-slide">
+							
+							<div class="wendaWrap dati">
+								<div class='line  wendaList' >
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<span class='title'>单选题:</span>
+											<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+										</div>
+										<div class="panel-body">
+											<div class='item'>
+												<span>A</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>B</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>C</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>D</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+				        </div>
+				        <div class="swiper-slide">
+							
+							<div class="wendaWrap dati">
+								<div class='line  wendaList' >
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<span class='title'>单选题:</span>
+											<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+										</div>
+										<div class="panel-body">
+											<div class='item'>
+												<span>A</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>B</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>C</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>D</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+				        </div>
+				    </div>
+				    <!-- 如果需要分页器 -->
+				    <div class="swiper-pagination swiper-pagination-fraction" id='answer-pagination'></div>
+				    
+				</div>
+			</section>
+
+			<footer class='datiFooter'>
+				<div class="row">
+					<div class="col-xs-3">
+						<span class='glyphicon glyphicon-heart-empty '></span>收藏
+					</div>
+					<div class="col-xs-3">
+						<span class='glyphicon glyphicon-search'></span>纠错
+					</div>
+					<div class="col-xs-3">
+						<span class='glyphicon glyphicon-ok'></span>2
+					</div>
+					<div class="col-xs-3">
+						<span class='glyphicon glyphicon-remove'></span>2	
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- 我的错题 -->
+		<div class="modalModule" id='modal_wrong'>
+			<section class='bgc'>
+				<header>
+					<span id='arr_left' class='modalClose'></span>
+					<span id='header_title'>答题</span>
+					<span id='add_icon'></span>
+				</header>
+
+				<div class='answerTitle'><span>我的错题</span></div>
+
+				<div class="swiper-container" id='wrong-swiper'>
+
+				    <div class="swiper-wrapper" >
+
+				        <div class="swiper-slide">
+
+							<div class='line  wendaList' >
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<span class='title'>单选题:</span>
+											<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+										</div>
+										<div class="panel-body">
+											<div class='item'>
+												<span>A</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>B</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span class='active'>C</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>D</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+										</div>
+									</div>
+									<div class='line  wendaList'>
+										<h3>
+											考点：<span>可燃物氧化剂</span>
+										</h3>
+										<h4>燃烧是指可燃物与氧化剂发生的一种发光发热的氧化反应。</h4>
+										<div class="item">
+											<span class='long'><label class='glyphicon glyphicon-heart-empty'></label>有用</span>
+											<span class='long'>
+											<label class='glyphicon glyphicon-thumbs-down'></label>没用</span>
+										</div>
+									</div>
+									<div class='line  wendaList'>
+										<h3>
+											统计：<span>我的错误率</span>
+										</h3>
+										<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+										<h3>
+											题友错误率：
+										</h3>
+										<div class="progress">
+										  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+										    60%
+										  </div>
+										</div>
+									</div>
+									<div class="well well-sm"><h3>拓展</h3></div>
+									<div class='line  wendaList'>
+										<h3>
+											统计：<span>我的错误率</span>
+										</h3>
+										<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+										<h3>
+											题友错误率：
+										</h3>
+										<div class="progress">
+										  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+										    60%
+										  </div>
+										</div>
+									</div>
+								</div>
+				        </div>
+				        <div class="swiper-slide">
+							
+							<div class='line  wendaList' >
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<span class='title'>单选题:</span>
+											<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+										</div>
+										<div class="panel-body">
+											<div class='item'>
+												<span>A</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>B</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span class='active'>C</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>D</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+										</div>
+									</div>
+									<div class='line  wendaList'>
+										<h3>
+											考点：<span>可燃物氧化剂</span>
+										</h3>
+										<h4>燃烧是指可燃物与氧化剂发生的一种发光发热的氧化反应。</h4>
+										<div class="item">
+											<span class='long'><label class='glyphicon glyphicon-heart-empty'></label>有用</span>
+											<span class='long'>
+											<label class='glyphicon glyphicon-thumbs-down'></label>没用</span>
+										</div>
+									</div>
+									<div class='line  wendaList'>
+										<h3>
+											统计：<span>我的错误率</span>
+										</h3>
+										<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+										<h3>
+											题友错误率：
+										</h3>
+										<div class="progress">
+										  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+										    60%
+										  </div>
+										</div>
+									</div>
+									<div class="well well-sm"><h3>拓展</h3></div>
+									<div class='line  wendaList'>
+										<h3>
+											统计：<span>我的错误率</span>
+										</h3>
+										<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+										<h3>
+											题友错误率：
+										</h3>
+										<div class="progress">
+										  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+										    60%
+										  </div>
+										</div>
+									</div>
+								</div>
+				        </div>
+				        <div class="swiper-slide">
+							
+							<div class='line  wendaList' >
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<span class='title'>单选题:</span>
+											<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+										</div>
+										<div class="panel-body">
+											<div class='item'>
+												<span>A</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>B</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span class='active'>C</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>D</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+										</div>
+									</div>
+									<div class='line  wendaList'>
+										<h3>
+											考点：<span>可燃物氧化剂</span>
+										</h3>
+										<h4>燃烧是指可燃物与氧化剂发生的一种发光发热的氧化反应。</h4>
+										<div class="item">
+											<span class='long'><label class='glyphicon glyphicon-heart-empty'></label>有用</span>
+											<span class='long'>
+											<label class='glyphicon glyphicon-thumbs-down'></label>没用</span>
+										</div>
+									</div>
+									<div class='line  wendaList'>
+										<h3>
+											统计：<span>我的错误率</span>
+										</h3>
+										<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+										<h3>
+											题友错误率：
+										</h3>
+										<div class="progress">
+										  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+										    60%
+										  </div>
+										</div>
+									</div>
+									<div class="well well-sm"><h3>拓展</h3></div>
+									<div class='line  wendaList'>
+										<h3>
+											统计：<span>我的错误率</span>
+										</h3>
+										<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+										<h3>
+											题友错误率：
+										</h3>
+										<div class="progress">
+										  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+										    60%
+										  </div>
+										</div>
+									</div>
+								</div>
+				        </div>
+				        <div class="swiper-slide">
+							
+							<div class='line  wendaList' >
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<span class='title'>单选题:</span>
+											<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+										</div>
+										<div class="panel-body">
+											<div class='item'>
+												<span>A</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>B</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span class='active'>C</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+											<div class='item'>
+												<span>D</span>
+												<input type="radio" name='question01'>
+												<label>稳定剂</label>
+											</div>
+										</div>
+									</div>
+									<div class='line  wendaList'>
+										<h3>
+											考点：<span>可燃物氧化剂</span>
+										</h3>
+										<h4>燃烧是指可燃物与氧化剂发生的一种发光发热的氧化反应。</h4>
+										<div class="item">
+											<span class='long'><label class='glyphicon glyphicon-heart-empty'></label>有用</span>
+											<span class='long'>
+											<label class='glyphicon glyphicon-thumbs-down'></label>没用</span>
+										</div>
+									</div>
+									<div class='line  wendaList'>
+										<h3>
+											统计：<span>我的错误率</span>
+										</h3>
+										<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+										<h3>
+											题友错误率：
+										</h3>
+										<div class="progress">
+										  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+										    60%
+										  </div>
+										</div>
+									</div>
+									<div class="well well-sm"><h3>拓展</h3></div>
+									<div class='line  wendaList'>
+										<h3>
+											统计：<span>我的错误率</span>
+										</h3>
+										<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+										<h3>
+											题友错误率：
+										</h3>
+										<div class="progress">
+										  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+										    60%
+										  </div>
+										</div>
+									</div>
+								</div>
+				        </div>
+				    </div>
+				    <!-- 如果需要分页器 -->
+				    <div class="swiper-pagination swiper-pagination-fraction" id='wrong-pagination'></div>
+				    
+				</div>
+			</section>
+
+			<footer class='datiFooter'>
+				<div class="row">
+					<div class="col-xs-3">
+						<span class='glyphicon glyphicon-heart-empty '></span>收藏
+					</div>
+					<div class="col-xs-3">
+						<span class='glyphicon glyphicon-search'></span>纠错
+					</div>
+					<div class="col-xs-3">
+						<span class='glyphicon glyphicon-ok'></span>2
+					</div>
+					<div class="col-xs-3">
+						<span class='glyphicon glyphicon-remove'></span>2	
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- 排行榜 -->
+		<div class="modalModule" id="modal_paihang">
+
+			<header>
+				<span id='arr_left' class='modalClose'></span>
+				<span id='header_title'>排行榜</span>
+				<span id='add_icon'></span>
+			</header>
+
+			<section id='page_paihang' class='bgc'>
+
+				<div class="subNav clearfix">
+					<span class='twoSpan'></span>
+					<div class='active twoList' name='readWrap'>月排行</div>
+					<div class='twoList' name='videoWrap'>总排行</div>
+				</div>
+
+				<div class='readWrap readList'>
+					<div class="clearfix readHistoryList paihangList myList">
+						<div class="col-xs-2">
+							<img src="img/touxiang.png" width=100% alt="">
+						</div>
+						<div class="col-xs-10">
+							<h4><span style='color:#70788c; margin-right:1rem'>[我]</span>不知火舞</h4>
+							<p>第四名</p>
+							<span class='defen'>4分</span>
+						</div>
+					</div>
+					<div class="clearfix readHistoryList paihangList">
+						<div class="col-xs-2">
+							<img src="img/touxiang.png" width=100% alt="">
+						</div>
+						<div class="col-xs-10">
+							<h4>白起</h4>
+							<p>第一名</p>
+							<span class='defen'>200分</span>
+						</div>
+					</div>
+					<div class="clearfix readHistoryList paihangList">
+						<div class="col-xs-2">
+							<img src="img/touxiang.png" width=100% alt="">
+						</div>
+						<div class="col-xs-10">
+							<h4>孙尚香</h4>
+							<p>第二名</p> 
+							<span class='defen'>145分</span>
+						</div>
+					</div>
+					<div class="clearfix readHistoryList paihangList">
+						<div class="col-xs-2">
+							<img src="img/touxiang.png" width=100% alt="">
+						</div>
+						<div class="col-xs-10">
+							<h4>芈月</h4>
+							<p>第三名</p>
+							<span class='defen'>24分</span>
+						</div>
+					</div>
+				</div>
+				<div class='videoWrap readList  myHide'>
+					<div class="clearfix readHistoryList videoHistoryList paihangList myList">
+						<div class="col-xs-2">
+							<img src="img/touxiang.png" width=100% alt="">
+						</div>
+						<div class="col-xs-10">
+							<h4><span style='color:#70788c; margin-right:1rem'>[我]</span>不知火舞</h4>
+							<p>第六名</p>
+							<span class='defen'>4分</span>
+						</div>
+					</div>
+					<div class="clearfix readHistoryList videoHistoryList paihangList">
+						<div class="col-xs-2">
+							<img src="img/touxiang.png" width=100% alt="">
+						</div>
+						<div class="col-xs-10">
+							<h4>程咬金</h4>
+							<p>第一名</p>
+							<span class='defen'>234分</span>
+						</div>
+					</div>
+					<div class="clearfix readHistoryList videoHistoryList paihangList">
+						<div class="col-xs-2">
+							<img src="img/touxiang.png" width=100% alt="">
+						</div>
+						<div class="col-xs-10">
+							<h4>大乔</h4>
+							<p>第二名</p>
+							<span class='defen'>123分</span>
+						</div>
+					</div>
+					<div class="clearfix readHistoryList videoHistoryList paihangList">
+						<div class="col-xs-2">
+							<img src="img/touxiang.png" width=100% alt="">
+						</div>
+						<div class="col-xs-10">
+							<h4>小乔</h4>
+							<p>第三名</p>
+							<span class='defen'>23分</span>
+						</div>
+					</div>
+				</div>
+
+			</section>
+		</div>
+		<!-- 答题PK -->
+		<div class="modalModule" id="modal_pk">
+			???
+		</div>
+		<!-- 我出题 -->
+		<div class="modalModule" id="modal_chuti">
+			???
+		</div>
+		
+
+	<!-- 问答 -->
+	<div class="modalModule bgc" id='modal_wenda'>
+		<header>
+			<span id='arr_left' class='modalClose'></span>
+			<span id='header_title'>问答</span>
+			<span id='add_icon'></span>
+		</header>
+		<div class="subNav clearfix">
+			<span class='threeSpan'></span>
+			<div class='active threeList' name='readWrap'>推荐</div>
+			<div class='threeList' name='videoWrap'>最新</div>
+			<div class='threeList' name='videoWrap'>等待回答</div>
+		</div>
+
+		<div class="wendanWrap">
+
+			<div class='line  wendaList'>
+				<h4>
+					来自<span>安全生产法</span>
+				</h4>
+				<h3>谁有2017年新版本安全生产法学习地址？</h3>
+				<h5>
+					<a><span class='glyphicon glyphicon-pencil'></span>撰写答案</a>
+					回答问题最高获取<span class='jifen'>3积分</span>哦！
+				</h5>
+			</div>
+			<div class='line  wendaList'>
+				<h4>
+					来自<span>安全生产法</span>
+				</h4>
+				<h3>谁有2017年新版本安全生产法学习地址？</h3>
+				<h5>
+					<a><span class='glyphicon glyphicon-pencil'></span>撰写答案</a>
+					回答问题最高获取<span class='jifen'>3积分</span>哦！
+				</h5>
+			</div>
+			<div class='line  wendaList'>
+				<h4>
+					来自<span>安全生产法</span>
+				</h4>
+				<h3>谁有2017年新版本安全生产法学习地址？</h3>
+				<h5>
+					<a><span class='glyphicon glyphicon-pencil'></span>撰写答案</a>
+					回答问题最高获取<span class='jifen'>3积分</span>哦！
+				</h5>
+			</div>
+		</div>
+		
+		<span class='addIcon' name='#modal_wenda'>添加</span>
+		<div class="addContent" name='#modal_wenda'>
+			<img src="img/add.png" width='100%' alt="">
+		</div>	
+	</div>
+
+
+	<!-- 经验 -->
+	<div class="modalModule bgc" id="modal_jingyan">
+		<header>
+			<span id='arr_left' class='modalClose'></span>
+			<span id='header_title'>经验</span>
+			<span id='add_icon'></span>
+		</header>
+		<div class="jingyanWrap">
+			<div class='line  jingyanList row'>
+				<div class="col-xs-2">
+					<div class='userFace'><img src="img/touxiang.png" width='100%'></div>
+				</div>
+				<div class="col-xs-10">
+					<h4>
+						<div style='padding-top:2rem'>
+							<p>来自话题生产法</p>
+							<span class='tips time'>2016-10-12</span>
+						</div>
+					</h4>
+					<h3>安全生产的经验和做法</h3>
+					<h5>
+						<p>
+							小王：基本做法及经验，安全生产是“人命关天”的大事，是重于一切、大于一切、高于一切、先于一切的工作。
+						</p>
+						<div class="subTips">
+							<span class='tips' id='zantong'>123赞同</span>
+							<span class='tips' id='pinglun'>265评论</span>
+							<span class='tips' id='zhuanlan'>前往专栏</span>
+						</div>
+						
+					</h5>
+				</div>	
+			</div>
+			<div class='line  jingyanList row'>
+				<div class="col-xs-2">
+					<div class='userFace'><img src="img/touxiang.png" width='100%'></div>
+				</div>
+				<div class="col-xs-10">
+					<h4>
+						<div style='padding-top:2rem'>
+							<p>来自话题生产法</p>
+							<span class='tips time'>2016-10-12</span>
+						</div>
+					</h4>
+					<h3>安全生产的经验和做法</h3>
+					<h5>
+						<p>
+							小王：基本做法及经验，安全生产是“人命关天”的大事，是重于一切、大于一切、高于一切、先于一切的工作。
+						</p>
+						<div class="subTips">
+							<span class='tips' id='zantong'>123赞同</span>
+							<span class='tips' id='pinglun'>265评论</span>
+							<span class='tips' id='zhuanlan'>前往专栏</span>
+						</div>
+						
+					</h5>
+				</div>	
+			</div>
+			<div class='line  jingyanList row'>
+				<div class="col-xs-2">
+					<div class='userFace'><img src="img/touxiang.png" width='100%'></div>
+				</div>
+				<div class="col-xs-10">
+					<h4>
+						<div style='padding-top:2rem'>
+							<p>来自话题生产法</p>
+							<span class='tips time'>2016-10-12</span>
+						</div>
+					</h4>
+					<h3>安全生产的经验和做法</h3>
+					<h5>
+						<p>
+							小王：基本做法及经验，安全生产是“人命关天”的大事，是重于一切、大于一切、高于一切、先于一切的工作。
+						</p>
+						<div class="subTips">
+							<span class='tips' id='zantong'>123赞同</span>
+							<span class='tips' id='pinglun'>265评论</span>
+							<span class='tips' id='zhuanlan'>前往专栏</span>
+						</div>
+						
+					</h5>
+				</div>	
+			</div>
+		</div>
+		<span class="addIcon" name='#modal_jingyan'>添加</span>
+		<div class="addContent" name='#modal_jingyan'>
+			<img src="img/add.png" width='100%' alt="">
+		</div>
+	</div>	
+	
+	<!-- 直播 -->
+	<div class="modalModule bgc" id="modal_live">
+		<header>
+			<span id='arr_left' class='modalClose'></span>
+			<span id='header_title'>视频</span>
+			<span id='add_icon'></span>
+		</header>
+		<!-- 视频 -->
+		<section class='bgc'>
+			<video id="myVideo" src="video/video.mp4" poster='img/poster.jpg' controls='controls' width='100%'>
+				您的浏览器不支持播放视频，请升级到最新你版本。
+			</video>
+			<div class="subNav clearfix">
+				<span class='twoSpan'></span>
+				<div class='active twoList' name='section'>聊天</div>
+				<div class='twoList' name='detail'>课程详情</div>
+			</div>
+			<div class="wendaWrap section">
+				<img src="img/liaotian (1).png" width='100%' alt="">
+				<div class='liveBottom'>
+					<img src="img/liaotian (2).png" width='100%' alt="">
+				</div>
+			</div>
+			<div class="wendaWrap detail myHide" >
+				<div class='line  wendaList'>
+					<h3>
+						课程简介
+					</h3>
+					<h4>这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介。</h4>
+
+				</div>
+
+			</div>
+		</section>
+		<span class="addIcon" name='#modal_video'>添加</span>
+		<div class="addContent" name='#modal_video'>
+			<img src="img/add.png" width='100%' alt="">
+		</div>	
+	</div>
+	<!-- video简介 -->
+	<div class="modalModule bgc" id="modal_indroduce_video">
+		<div class="backBtn modalClose"></div>
+		<img src="img/introduce.png" width='100%' alt="">
+		<div class='startStudy startVideo'><img src="img/start-stydy.png" width="100%" alt=""></div>
+	</div>
+	<!-- 阅读简介 -->
+	<div class="modalModule bgc" id="modal_indroduce_read">
+		<div class="backBtn modalClose"></div>
+		<img src="img/introduce.png" width='100%' alt="">
+		<div class='startStudy startRead'><img src="img/start-stydy.png" width="100%" alt=""></div>
+	</div>
+		<!-- video -->
+		<div class="modalModule bgc" id="modal_video">
+			<header>
+				<span id='arr_left' class='modalClose'></span>
+				<span id='header_title'>视频</span>
+				<span id='add_icon'></span>
+			</header>
+			<!-- 视频 -->
+			<section class='bgc'>
+				<video id="myVideo" src="video/video.mp4" poster='img/poster.jpg' controls='controls' width='100%'>
+					您的浏览器不支持播放视频，请升级到最新你版本。
+				</video>
+				<div class="subNav clearfix">
+					<span class='fourSpan'></span>
+					<div class='active fourList' name='section'>章节</div>
+					<div class='fourList' name='detail'>详情</div>
+					<div class='fourList' name='teacher'>评论</div>
+					<div class='fourList' name='wenda'>问答</div>
+				</div>
+				<div class="wendaWrap section">
+					<div class='line  wendaList' >
+						<h3>
+							第一章
+						</h3>
+						<h4>安全生产责任重于泰山。</h4>
+						<h4>如何落实安全生产。</h4>
+
+					</div>
+					<div class='line  wendaList'>
+						<h3>
+							第二章
+						</h3>
+						<h4>安全生产责任重于泰山。</h4>
+						<h4>如何落实安全生产。</h4>
+
+					</div>
+					<div class='line  wendaList'>
+						<h3>
+							第三章
+						</h3>
+						<h4>安全生产责任重于泰山。</h4>
+						<h4>如何落实安全生产。</h4>
+
+					</div>
+				</div>
+				<div class="wendaWrap detail myHide" >
+					<div class='line  wendaList'>
+						<h3>
+							课程简介
+						</h3>
+						<h4>这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介。</h4>
+
+					</div>
+
+				</div>
+				<div class="wendaWrap teacher myHide">
+					
+					<div class="jingyanWrap">
+						<div class='line  jingyanList row'>
+							<div class="col-xs-2">
+								<div class='userFace'><img src="img/touxiang.png" width='100%'></div>
+							</div>
+							<div class="col-xs-10">
+								
+								
+								<h5>
+									<p>
+										小王：基本做法及经验，安全生产是“人命关天”的大事，是重于一切、大于一切、高于一切、先于一切的工作。
+									</p>
+									<div class="subTips">
+										<span class='tips' id='zantong'>123赞同</span>
+										<span class='tips' id='pinglun'>265评论</span>
+										
+									</div>
+									
+								</h5>
+							</div>	
+						</div>
+						<div class='line  jingyanList row'>
+							<div class="col-xs-2">
+								<div class='userFace'><img src="img/touxiang.png" width='100%'></div>
+							</div>
+							<div class="col-xs-10">
+								
+								
+								<h5>
+									<p>
+										小王：基本做法及经验，安全生产是“人命关天”的大事，是重于一切、大于一切、高于一切、先于一切的工作。
+									</p>
+									<div class="subTips">
+										<span class='tips' id='zantong'>123赞同</span>
+										<span class='tips' id='pinglun'>265评论</span>
+										
+									</div>
+									
+								</h5>
+							</div>	
+						</div>
+						<div class='line  jingyanList row'>
+							<div class="col-xs-2">
+								<div class='userFace'><img src="img/touxiang.png" width='100%'></div>
+							</div>
+							<div class="col-xs-10">
+								
+								
+								<h5>
+									<p>
+										小王：基本做法及经验，安全生产是“人命关天”的大事，是重于一切、大于一切、高于一切、先于一切的工作。
+									</p>
+									<div class="subTips">
+										<span class='tips' id='zantong'>123赞同</span>
+										<span class='tips' id='pinglun'>265评论</span>
+										
+									</div>
+									
+								</h5>
+							</div>	
+						</div>
+					</div>
+
+				</div>
+
+				<div class="wendaWrap wenda myHide">
+					<img src="img/wenda.png" width='100%' alt="">
+				</div>
+
+
+			</section>
+			<span class="addIcon" name='#modal_video'>添加</span>
+			<div class="addContent" name='#modal_video'>
+				<img src="img/add.png" width='100%' alt="">
+			</div>	
+
+		</div>
+		<!-- 阅读 -->
+		<div class="modalModule bgc" id="modal_document">
+			<header>
+				<span id='arr_left' class='modalClose'></span>
+				<span id='header_title'>阅读</span>
+				<span id='add_icon'></span>
+			</header>
+			<iframe id='pdfWrap' src="pdfjs-1.6.210-dist/web/viewer.html?file=../../document/01.pdf" frameborder="0" width='100%'></iframe>
+			<span class="addIcon" name='#modal_document'>做题</span>
+		</div>
+	
+	<!-- more study -->
+	<div class="modalModule bgc" id='module_more'>
+		<header>
+			<span id='arr_left' class='modalClose'></span>
+			<span id='header_title'>更多</span>
+			<span id='add_icon'></span>
+		</header>
+		<section id='page_readDetail'>
+			<!-- perfect -->
+			<div class="classNav">
+				<img src="img/classnav.png" width='100%' alt="">
+			</div>
+			<div class="list">
+				<div class="row listWrap">
+					<div class="col-xs-6 listNavBig listNav03 document">
+						<a href="#"></a>
+					</div>
+					<div class="col-xs-6 listNavBig listNav03 document">
+						<a href="#"></a>
+					</div>
+				</div>
+				<div class="row listWrap">
+					<div class="col-xs-6 listNavBig listNav03 document">
+						<a href="#"></a>
+					</div>
+					<div class="col-xs-6 listNavBig listNav03 document">
+						<a href="#"></a>
+					</div>
+				</div>
+				<div class="row listWrap">
+					<div class="col-xs-6 listNavBig listNav03 document">
+						<a href="#"></a>
+					</div>
+					<div class="col-xs-6 listNavBig listNav03 document">
+						<a href="#"></a>
+					</div>
+				</div>
+				<div class="row listWrap">
+					<div class="col-xs-6 listNavBig listNav03 document">
+						<a href="#"></a>
+					</div>
+					<div class="col-xs-6 listNavBig listNav03 document">
+						<a href="#"></a>
+					</div>
+				</div>
+			</div>
+			<!-- fav -->
+			<div class="list">
+				<div class="row listWrap">
+					<div class="col-xs-6 listNavBig listNav04 video">
+						<a href="#"></a>
+					</div>
+					<div class="col-xs-6 listNavBig listNav04 video">
+						<a href="#"></a>
+					</div>
+				</div>
+				<div class="row listWrap">
+					<div class="col-xs-6 listNavBig listNav04 video">
+						<a href="#"></a>
+					</div>
+					<div class="col-xs-6 listNavBig listNav04 document">
+						<a href="#"></a>
+					</div>
+				</div>
+				<div class="row listWrap">
+					<div class="col-xs-6 listNavBig listNav04 video">
+						<a href="#"></a>
+					</div>
+					<div class="col-xs-6 listNavBig listNav04 video">
+						<a href="#"></a>
+					</div>
+				</div>
+				<div class="row listWrap">
+					<div class="col-xs-6 listNavBig listNav04 video">
+						<a href="#"></a>
+					</div>
+					<div class="col-xs-6 listNavBig listNav04 document">
+						<a href="#"></a>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+	</div>
+
+	<!-- 我的dna -->
+	<div class="modalModule bgc" id="module_dna">
+		<div class="backBtn modalClose"></div>
+		<img src="img/dna.png" alt="" width='100%'>
+	</div>
+
+	<footer ID='footer'>
+		<div class="row">
+			<div class="col-xs-4 footerItem">
+				<a class='active' href="#"></a>
+			</div>
+			<div class="col-xs-4 footerItem">
+				<a href="#"></a>
+			</div>
+			<div class="col-xs-4 footerItem">
+				<a href="#"></a>
+			</div>
+			<!-- <div class="col-xs-3 footerItem">
+				<a href="#"></a>
+			</div> -->
+		</div>	
+	</footer>
+</body>
+
+<script type="text/javascript">
+
+$(function(){
+		// 阅读文档页面高度
+		console.log($("header").outerHeight())
+		$("#pdfWrap").height( $(window).height()-$("header").outerHeight() ) ;
+		// 做题界面swiper高度设置
+		$("#answerReview-swiper").height( $(window).height()-$("header").outerHeight()-$(".datiFooter").outerHeight()-$('#answerTitle').outerHeight(true)) ;
+		$("#answer-swiper").height( $(window).height()-$("header").outerHeight()-$(".datiFooter").outerHeight()-$('.answerTitle').outerHeight(true)) ;
+	})
+
+
+
+// 一级导航swiper
+var swiper01 = new Swiper('#main-swiper', {
+        pagination: '#main-pagination',
+        paginationClickable: true,
+		autoplayDisableOnInteraction : false,
+		loop : false,
+		onSlideChangeStart: function(swiper){
+	      $("#footer a").removeClass('active');
+	      $("#footer .footerItem").eq(swiper.activeIndex).find('a').addClass('active');
+	    }
+    });
+	$("#footer .footerItem").on('touchend',function(){
+		console.log($(this).index());
+		$("#main-pagination span").eq($(this).index()).trigger('click');
+	})
+	
+
+
+
+// banner swiper
+var swiper02 = new Swiper('#nav-swiper', {
+    pagination: '#nav-pagination',
+    paginationClickable: true,
+    autoplay : 2000,
+	autoplayDisableOnInteraction : false,
+	loop : true,
+});
+
+// answer swiper
+var swiper03 = new Swiper('#answer-swiper', {
+    pagination: '#answer-pagination',
+    paginationType: 'fraction',
+    paginationClickable: true,
+});
+
+// wrong seiper
+var swiper04 = new Swiper('#wrong-swiper', {
+    pagination: '#wrong-pagination',
+    paginationType: 'fraction',
+    paginationClickable: true,
+});
+
+// answerReview swiper
+var swiper05 = new Swiper('#answerReview-swiper', {
+    pagination: '#answerReview-pagination',
+    paginationType: 'fraction',
+    paginationClickable: true,
+});
+
+
+
+    /*全屏模态窗*/
+	/*结构模板*/
+	/*<div class="modalModule" id='modalRead'>
+		<div class="modalTitle">
+			<header>
+				<span id='arr_left' class='modalClose'></span>
+				<span id='add_icon'></span>
+			</header>
+		</div>
+	</div>*/
+	var initIndex=1000;
+	function fnModal(id1,id2){
+		$(id1).on('click',function(){
+			initIndex++;
+			$(id2).animate({'left':'0'},200);
+			$(id2).css({"z-index":initIndex});
+			$('#page_index').css({'display':'hidden'});
+			 $('.addIcon[name="'+id2+'"]').show().animate({'bottom':'12rem'},400);
+		})
+		$(id2).find('.modalClose').on('click',function(e){
+			$(id2).animate({'left':'-108rem'},200);
+			$('#page_index').css({'overflow-y':'hidden'});
+			 $('.addIcon[name="'+id2+'"]').hide().css({'bottom':'-10rem'});
+		})
+	}
+
+	fnModal('#readBtn','#modal_read');
+	fnModal('#datiBtn','#modal_dati');
+	fnModal('#wendaBtn','#modal_wenda');
+	//经验暂时取消
+	//fnModal('#jingyanBtn','#modal_jingyan');
+	fnModal('#moreQuestion','#modal_question');
+	fnModal('#zxdt','#modal_class');
+	fnModal('#zhdt','#modal_answerReview');
+	fnModal('#mrdt','#modal_answer');
+	fnModal('#wdct','#modal_wrong');
+	fnModal('#mncs','#modal_answer');
+	fnModal('#ksks','#modal_answer');
+	fnModal('#phb','#modal_paihang');
+	fnModal('#btnSubmit','#modal_answer');
+	fnModal('.live','#modal_live')
+	fnModal('.video','#modal_indroduce_video');
+	fnModal('.document','#modal_indroduce_read');
+		fnModal('.startVideo','#modal_video');
+		fnModal('.startRead','#modal_document');
+	fnModal('.class_content','#module_readDetail');
+	fnModal('.more','#module_more');
+	fnModal('#my-dna','#module_dna');
+
+
+	/*function fnSubTab(obj1,obj2,obj3,len01,len02){
+		$(obj1).click(function(){
+			$(this).addClass('active').siblings('div').removeClass('active');
+			var num=($(this).index()-1)*len02;
+			$(obj3).animate({'left':(len01+num)+'rem'},400);
+			var name=$(this).attr('name');
+			$(obj2).fadeOut(0);
+			$('.'+name).fadeIn(100);
+		})
+	}*/
+	function fnSubTab(obj1,obj2,obj3,len01,len02,speed){
+		$(obj1).on('click',function(){
+			$(this).addClass('active').siblings('div').removeClass('active');
+			var num=($(this).index()-1)*len02;
+			$(obj3).stop().animate({'left':(len01+num)+'rem'},speed);
+			var name=$(this).attr('name');
+			$(obj2).hide();
+			$('.'+name).show();
+		})
+	}
+
+	/*历史纪录分类*/
+	fnSubTab('#page_history .subNav div','.readList','#page_history .subNav span',22.5,55.4,400)
+	// 课程详情 
+	fnSubTab('#page_readDetail .subNav div','.readList','#page_readDetail .subNav span',22.5,55.4,400)
+	// 排行榜
+	fnSubTab('#modal_paihang .subNav div','.readList','#modal_paihang .subNav span',22.5,55.4,400)
+	/*课程模态窗副标题*/
+	fnSubTab('#modal_read .subNav div','.readList','#modal_read .subNav span',22.5,55.4,400)
+
+	/*问答模态窗副标题*/
+	fnSubTab('#modal_wenda .subNav div','.readList','#modal_wenda .subNav span',14.2,36,400)
+	/*答题模态窗副标题*/
+	fnSubTab('#modal_answerReview .subNav div','.wendaWrap','.subNav span',22.5,55.4,400)
+	/*video模态窗副标题*/
+	fnSubTab('#modal_video .subNav div','.wendaWrap','.subNav span',8.8,27,400)
+
+	/*$('#modal_read .subNav div').click(function(){
+		$(this).addClass('active').siblings('div').removeClass('active');
+		var num=($(this).index('div'))*55.4;
+		$('#modal_read .subNav span').animate({'left':(22.5+num)+'rem'},400);
+		var name=$(this).attr('name');
+		$('.readList').fadeOut(0);
+		$('.'+name).fadeIn(100);
+	})*/
+	
+
+
+	// 题库选择
+	$('.tag').click(function(){
+
+		$(this).toggleClass('tagActive');
+	})
+	// swiper高度重置
+	$('.swiper-container:not(#nav-swiper)').height($(window).height());
+
+	
+	// 课程分类选择
+
+	$("#class_sidebar li").on('click',function(ev){
+
+		$(this).addClass('active').siblings().removeClass('active');
+		var num=($(this).index()-1)*14;
+		$('#tip_bar').stop().animate({'top':num+'rem'},200);
+		$(".class_content").eq($(this).index()-1).show().siblings('.class_content').hide();
+
+	})
+		
+
+	/*add*/
+	$(".addIcon").click(function(){
+		$(this).hide();
+		$(this).next('.addContent').show().animate({'opacity':'0.9'},400)
+	})
+	$(".addContent").click(function(){
+		$(this).animate({'opacity':'0'},400,function(){
+			$(this).hide();
+		})
+		
+		$(this).prev('.addIcon').show();
+	})
+
+
+</script>
+</html>

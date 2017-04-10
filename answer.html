@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" id="viewport" content="user-scalable=no">
+	<script type="text/javascript" src='js/jquery-3.1.0.min.js'></script>
+	<script type="text/javascript" src='bootstrap-3.3.5-dist/js/bootstrap.min.js'></script>
+	<script type="text/javascript" src='js/swiper.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<title>Document</title>
+	<meta name="wap-font-scale" content="no">
+	<script type="text/javascript">
+		document.getElementsByTagName('html')[0].style.fontSize=document.documentElement.clientWidth/108+'px';
+	</script>
+	<style>
+		.wendaList{
+		padding:2rem 5rem;
+		margin-top:2rem;
+		background: #fff;
+		}
+		.wendaList .title{
+			font-size:4.0rem;
+			color:#e6353a;
+			line-height: 6rem;
+			margin-right:1rem;
+		}
+		.wendaList .tigan{
+			font-size:3.6rem;
+			color:#333333;
+			line-height: 6rem;
+			margin-right:1rem;
+		}
+		.wendaList h4{
+			font-size:3.4rem;
+			color:#333333;
+			line-height: 6rem;
+		}
+		.wendaList h3{
+			font-size: 4.0rem;
+			color:#333333;
+			line-height: 9rem;
+		}
+		.wendaList .panel-body .item{
+			margin-bottom:1rem;
+		}
+		.wendaList .item span{
+			width:6rem;
+			display:inline-block;
+			height:6rem;
+			border:1px solid #b7bbbf;
+			border-radius:3rem;
+			font-weight: normal;
+			text-align: center;
+			line-height: 6rem;
+			font-size:3.4rem;
+			color:#b7bbbf;
+		}
+		.wendaList .item span label{
+			position:absolute;
+			left:3rem;
+			top:1rem;
+			color:#e6353a;
+		}
+		.wendaList  .item .long{
+			width:18rem;
+			height:8rem;
+			line-height: 8rem;
+			border-radius: 4rem;
+			position:relative;
+			padding-left:4rem;
+			color:#333;
+			margin-top:4rem;
+			margin-right:4rem;
+		}
+		.wendaList  .item .active{
+			background: #e6353a;
+			color:#fff;
+		}
+		.wendaList  .item input{
+			position:relative;
+			left:1000rem;
+		}
+		.wendaList  .item label{
+			font-size:3.6rem;
+			color:#333333;
+			line-height: 6rem;
+			font-weight: normal;
+			margin-right:1rem;
+		}
+		
+		.subNav{
+			margin:0;
+			padding:0;
+			box-shadow: 0px 0px 1px #ccc;
+		}
+		
+		.module{
+			position: absolute;
+			left:50rem;
+		}
+
+		.line{
+			border-top:1px dashed #b7bbbf;
+			margin-top:4rem;
+			border-bottom:none;
+		}
+		.swiper-slide{
+			overflow-y: auto;
+			overflow-x:hidden; 
+			padding-bottom: 4rem;
+		}
+		.progress{
+			height:4rem;
+		}
+		.progress-bar{
+			font-size: 3.4rem;
+			line-height: 4rem;
+			background: #e6353a;
+		}
+		.swiper-pagination {
+		    position: relative;
+			bottom:5rem;
+		    left: 42rem;
+		    z-index: 10000;
+		    font-size: 3.4rem;
+		    color: #b7bbbf;
+		}
+		#footer{
+			font-size: 3.6rem;
+			line-height: 10rem;
+			height:10rem;
+			color:#b7bbbf;
+		}
+		#footer div{
+			text-align: center;
+		}
+		#footer span{
+			color:#70788c;
+			font-size: 4rem;
+			position:relative;
+			top:1rem;
+			margin-right: 3rem;
+		}
+		#footer .glyphicon-ok{
+			color:green;
+		}
+		#footer .glyphicon-remove{
+			color:#e6353a;
+		}
+
+	</style>
+</head>
+<body>
+
+	<section id="page_index" class='bgc'>
+		<header>
+			<span id='back' class='glyphicon glyphicon-chevron-left' style='font-size: 5rem;color:#fff;line-height:10rem '></span>
+			<span id='add_icon'></span>
+		</header>
+		<div class="swiper-container">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide" id='question01'>
+					<div class="subNav clearfix">
+						<span class='twoSpan'></span>
+						<div class='active twoList' name='dati'>普通答题</div>
+						<div class='twoList' name='beiti'>背题模式</div>
+					</div>
+					<div class="wendaWrap dati">
+						<div class='line  wendaList' >
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<span class='title'>单选题:</span>
+									<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+								</div>
+								<div class="panel-body">
+									<div class='item'>
+										<span>A</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span>B</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span>C</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span>D</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wendaWrap beiti myHide" >
+						<div class='line  wendaList' >
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<span class='title'>单选题:</span>
+									<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+								</div>
+								<div class="panel-body">
+									<div class='item'>
+										<span>A</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span>B</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span class='active'>C</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span>D</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+								</div>
+							</div>
+							<div class='line  wendaList'>
+								<h3>
+									考点：<span>可燃物氧化剂</span>
+								</h3>
+								<h4>燃烧是指可燃物与氧化剂发生的一种发光发热的氧化反应。</h4>
+								<div class="item">
+									<span class='long'><label class='glyphicon glyphicon-heart-empty'></label>有用</span>
+									<span class='long'>
+									<label class='glyphicon glyphicon-thumbs-down'></label>没用</span>
+								</div>
+							</div>
+							<div class='line  wendaList'>
+								<h3>
+									统计：<span>我的错误率</span>
+								</h3>
+								<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+								<h3>
+									题友错误率：
+								</h3>
+								<div class="progress">
+								  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+								    60%
+								  </div>
+								</div>
+							</div>
+							<div class="well well-sm"><h3>拓展</h3></div>
+							<div class='line  wendaList'>
+								<h3>
+									统计：<span>我的错误率</span>
+								</h3>
+								<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+								<h3>
+									题友错误率：
+								</h3>
+								<div class="progress">
+								  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+								    60%
+								  </div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+		        </div>
+		        <div class="swiper-slide" id='question01'>
+					<div class="subNav clearfix">
+						<span class='twoSpan'></span>
+						<div class='active twoList' name='dati'>普通答题</div>
+						<div class='twoList' name='beiti'>背题模式</div>
+					</div>
+					<div class="wendaWrap dati">
+						<div class='line  wendaList' >
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<span class='title'>单选题:</span>
+									<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+								</div>
+								<div class="panel-body">
+									<div class='item'>
+										<span>A</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span>B</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span>C</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span>D</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wendaWrap beiti myHide" >
+						<div class='line  wendaList' >
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<span class='title'>单选题:</span>
+									<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+								</div>
+								<div class="panel-body">
+									<div class='item'>
+										<span>A</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span>B</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span class='active'>C</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span>D</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+								</div>
+							</div>
+							<div class='line  wendaList'>
+								<h3>
+									考点：<span>可燃物氧化剂</span>
+								</h3>
+								<h4>燃烧是指可燃物与氧化剂发生的一种发光发热的氧化反应。</h4>
+								<div class="item">
+									<span class='long'><label class='glyphicon glyphicon-heart-empty'></label>有用</span>
+									<span class='long'>
+									<label class='glyphicon glyphicon-thumbs-down'></label>没用</span>
+								</div>
+							</div>
+							<div class='line  wendaList'>
+								<h3>
+									统计：<span>我的错误率</span>
+								</h3>
+								<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+								<h3>
+									题友错误率：
+								</h3>
+								<div class="progress">
+								  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+								    60%
+								  </div>
+								</div>
+							</div>
+							<div class="well well-sm"><h3>拓展</h3></div>
+							<div class='line  wendaList'>
+								<h3>
+									统计：<span>我的错误率</span>
+								</h3>
+								<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+								<h3>
+									题友错误率：
+								</h3>
+								<div class="progress">
+								  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+								    60%
+								  </div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+		        </div>
+		        <div class="swiper-slide" id='question01'>
+					<div class="subNav clearfix">
+						<span class='twoSpan'></span>
+						<div class='active twoList' name='dati'>普通答题</div>
+						<div class='twoList' name='beiti'>背题模式</div>
+					</div>
+					<div class="wendaWrap dati">
+						<div class='line  wendaList' >
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<span class='title'>单选题:</span>
+									<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+								</div>
+								<div class="panel-body">
+									<div class='item'>
+										<span>A</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span>B</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span>C</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span>D</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wendaWrap beiti myHide" >
+						<div class='line  wendaList' >
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<span class='title'>单选题:</span>
+									<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+								</div>
+								<div class="panel-body">
+									<div class='item'>
+										<span>A</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span>B</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span class='active'>C</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span>D</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+								</div>
+							</div>
+							<div class='line  wendaList'>
+								<h3>
+									考点：<span>可燃物氧化剂</span>
+								</h3>
+								<h4>燃烧是指可燃物与氧化剂发生的一种发光发热的氧化反应。</h4>
+								<div class="item">
+									<span class='long'><label class='glyphicon glyphicon-heart-empty'></label>有用</span>
+									<span class='long'>
+									<label class='glyphicon glyphicon-thumbs-down'></label>没用</span>
+								</div>
+							</div>
+							<div class='line  wendaList'>
+								<h3>
+									统计：<span>我的错误率</span>
+								</h3>
+								<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+								<h3>
+									题友错误率：
+								</h3>
+								<div class="progress">
+								  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+								    60%
+								  </div>
+								</div>
+							</div>
+							<div class="well well-sm"><h3>拓展</h3></div>
+							<div class='line  wendaList'>
+								<h3>
+									统计：<span>我的错误率</span>
+								</h3>
+								<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+								<h3>
+									题友错误率：
+								</h3>
+								<div class="progress">
+								  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+								    60%
+								  </div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+		        </div>
+		        <div class="swiper-slide" id='question01'>
+					<div class="subNav clearfix">
+						<span class='twoSpan'></span>
+						<div class='active twoList' name='dati'>普通答题</div>
+						<div class='twoList' name='beiti'>背题模式</div>
+					</div>
+					<div class="wendaWrap dati">
+						<div class='line  wendaList' >
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<span class='title'>单选题:</span>
+									<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+								</div>
+								<div class="panel-body">
+									<div class='item'>
+										<span>A</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span>B</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span>C</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span>D</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wendaWrap beiti myHide" >
+						<div class='line  wendaList' >
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<span class='title'>单选题:</span>
+									<p class='tigan'>燃烧是可燃物与（）作用发生的放热反映，通常伴有火焰发光和发烟的现象。</p>
+								</div>
+								<div class="panel-body">
+									<div class='item'>
+										<span>A</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span>B</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span class='active'>C</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+									<div class='item'>
+										<span>D</span>
+										<input type="radio" name='question01'>
+										<label>稳定剂</label>
+									</div>
+								</div>
+							</div>
+							<div class='line  wendaList'>
+								<h3>
+									考点：<span>可燃物氧化剂</span>
+								</h3>
+								<h4>燃烧是指可燃物与氧化剂发生的一种发光发热的氧化反应。</h4>
+								<div class="item">
+									<span class='long'><label class='glyphicon glyphicon-heart-empty'></label>有用</span>
+									<span class='long'>
+									<label class='glyphicon glyphicon-thumbs-down'></label>没用</span>
+								</div>
+							</div>
+							<div class='line  wendaList'>
+								<h3>
+									统计：<span>我的错误率</span>
+								</h3>
+								<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+								<h3>
+									题友错误率：
+								</h3>
+								<div class="progress">
+								  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+								    60%
+								  </div>
+								</div>
+							</div>
+							<div class="well well-sm"><h3>拓展</h3></div>
+							<div class='line  wendaList'>
+								<h3>
+									统计：<span>我的错误率</span>
+								</h3>
+								<h4>共做过1次，做错<span style='color:#e6353a'>1</span>次，作对0次。</h4>
+								<h3>
+									题友错误率：
+								</h3>
+								<div class="progress">
+								  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+								    60%
+								  </div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+		        </div>
+		    </div>
+		    <!-- 如果需要分页器 -->
+		    <div class="swiper-pagination swiper-pagination-fraction"></div>
+		    
+		</div>
+
+	</section>
+
+	<footer id='footer'>
+		<div class="row">
+			<div class="col-xs-3">
+				<span class='glyphicon glyphicon-heart-empty '></span>收藏
+			</div>
+			<div class="col-xs-3">
+				<span class='glyphicon glyphicon-search'></span>纠错
+			</div>
+			<div class="col-xs-3">
+				<span class='glyphicon glyphicon-ok'></span>2
+			</div>
+			<div class="col-xs-3">
+				<span class='glyphicon glyphicon-remove'></span>2	
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+<script type="text/javascript">
+	function fnSubTab(obj1,obj2,obj3,len01,len02,speed){
+		$(obj1).on('touchend',function(){
+			$(this).addClass('active').siblings('div').removeClass('active');
+			var num=($(this).index()-1)*len02;
+			$(obj3).stop().animate({'left':(len01+num)+'rem'},speed);
+			var name=$(this).attr('name');
+			$(obj2).fadeOut(0);
+			console.log(name);
+			$('.'+name).fadeIn(100);
+		})
+	}
+
+	/*问答模态窗副标题*/
+	fnSubTab('.subNav div','.wendaWrap','.subNav span',22.5,55.4,400)
+	/*$('#modal_read .subNav div').click(function(){
+		$(this).addClass('active').siblings('div').removeClass('active');
+		var num=($(this).index('div'))*55.4;
+		$('#modal_read .subNav span').animate({'left':(22.5+num)+'rem'},400);
+		var name=$(this).attr('name');
+		$('.readList').fadeOut(0);
+		$('.'+name).fadeIn(100);
+	})*/
+
+	$("#back").click(function(){
+		window.location.href='trainingApp.html';
+
+	})
+	// swiper
+	var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationType: 'fraction',
+        paginationClickable: true,
+    });
+    window.onload=function(){
+		console.log($(window).height()-$("header").outerHeight());
+		$(".swiper-container").height( $(window).height()-$("header").outerHeight()-$("#footer").outerHeight() ) ;
+	}
+</script>
+</html>
